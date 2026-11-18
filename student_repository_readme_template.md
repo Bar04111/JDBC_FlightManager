@@ -15,11 +15,11 @@
 
 | Role | Full Name | Student ID | Braude Academic Email |
 | :--- | :--- | :--- | :--- |
-| **Student A** | `[Enter Student A Full Name]` | `[Enter ID]` | `[studentA@e.braude.ac.il]` |
-| **Student B** | `[Enter Student B Full Name]` | `[Enter ID]` | `[studentB@e.braude.ac.il]` |
+| **Student A** | `bar nahman` | `207851213` | `Bar.Nahman@e.braude.ac.il` |
+| **Student B** | `Oudai Jumaa` | `206977902` | `Oudai.Jumaa@e.braude.ac.il` |
 
 * **Group Number:** `G[XX]`
-* **GitHub Repository URL:** `https://github.com/[Username]/JDBC_FlightManager`
+* **GitHub Repository URL:** `https://github.com/Bar04111/JDBC_FlightManager`
 
 ---
 
@@ -49,7 +49,17 @@
 ## 5. Independent AI Prompt (Part 4 – `FlightViewer.java`)
 
 ```text
-[Paste here the exact English prompt you authored in Continue to generate FlightViewer.java]
+Create a Java class called FlightViewer with a main method that connects to my MySQL database called FlightDB s.
+
+The program should ask the user to enter the MySQL root password using Scanner and connect to the database using try-with-resources.
+
+After connecting, ask the user to enter a terminal number (2, 3, 4, or 5).
+
+Use a PreparedStatement with a ? parameter to get all flights from that terminal. The query should use an INNER JOIN between the Arrivals and FlightRoutes tables, filter by Arrivals.terminal, and sort the results by Arrivals.scheduled in ascending order.
+
+Since terminal is stored as VARCHAR, use pstmt.setString(1, terminal) to set the parameter.
+
+Finally, print the flight information in a clear and readable format and handle possible SQL exceptions.
 ```
 
 ---
